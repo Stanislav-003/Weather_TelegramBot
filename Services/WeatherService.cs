@@ -20,13 +20,13 @@ public class WeatherService(
 
         if (!response.IsSuccessStatusCode)
         {
-            return $"Ошибка при запросе погоды для города {city}: {response.StatusCode}";
+            return $"Помилка при запиті погоди для міста {city}: {response.StatusCode}";
         }
 
         var weatherResponse = await response.Content.ReadFromJsonAsync<WeatherResponse>();
         if (weatherResponse == null)
         {
-            return "Не удалось разобрать ответ от сервиса погоды.";
+            return "Не вдалось розібрати відповідь від сервісу погоди.";
         }
 
         var weatherInfo = $"🌍 Місто: {weatherResponse.Name}\n" +

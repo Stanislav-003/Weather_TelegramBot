@@ -14,7 +14,11 @@ public class UsersController : ControllerBase
     private readonly TelegramBotService _telegramBotService;
     private readonly WeatherNotificationService _weatherNotificationService;
 
-    public UsersController(UserService userService, WeatherService weatherService, TelegramBotService telegramBotService, WeatherNotificationService weatherNotificationService)
+    public UsersController(
+        UserService userService, 
+        WeatherService weatherService, 
+        TelegramBotService telegramBotService, 
+        WeatherNotificationService weatherNotificationService)
     {
         _userService = userService;
         _weatherService = weatherService;
